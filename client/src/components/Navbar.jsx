@@ -57,7 +57,7 @@ const Navbar = () => {
 
         {/* Download Resume Button */}
         <a
-          href="/resume.pdf"
+          href="/Muhammad_Danish_Resume.pdf"
           download
           className="flex items-center gap-2 no-underline transition-all duration-200"
           style={{
