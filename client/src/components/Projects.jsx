@@ -148,7 +148,7 @@ const MiniBadge = () => (
 );
 
 // ── featured card (spans 2 cols) ──────────────────────────
-const FeaturedCard = () => {
+const FeaturedCard = ({ liveUrl, githubUrl }) => {
   const [hovered, setHovered] = useState(false);
 
   return (
@@ -213,8 +213,8 @@ const FeaturedCard = () => {
           experience.
         </div>
         <div style={{ display: "flex", gap: "16px" }}>
-          <ProjectLink href="#" label="Live Demo" />
-          <ProjectLink href="#" label="GitHub" />
+          <ProjectLink href={liveUrl} label="Live Demo" />
+          <ProjectLink href={githubUrl} label="GitHub" />
         </div>
       </div>
 
@@ -384,16 +384,16 @@ const Projects = () => {
       name: "Notes App",
       desc: "A clean note-taking app with create, edit, and delete functionality. Notes persist in localStorage with a minimal, distraction-free UI.",
       stack: ["React", "Tailwind CSS"],
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "https://notes-app-flame-chi.vercel.app/",
+      githubUrl: "https://github.com/danish-devv/Notes-app",
     },
     {
       num: "003",
       name: "Snake Game",
       desc: "Classic snake game built from scratch with vanilla web tech. Includes score tracking, increasing speed, and keyboard controls.",
       stack: ["HTML", "CSS", "JavaScript"],
-      liveUrl: "#",
-      githubUrl: "#",
+      liveUrl: "https://snake-game-alpha-dusky.vercel.app/",
+      githubUrl: "https://github.com/danish-devv/snake-game",
     },
   ];
 
@@ -472,7 +472,7 @@ const Projects = () => {
 
             {/* View all on GitHub */}
             <a
-              href="https://github.com"
+              href="https://github.com/danish-devv"
               target="_blank"
               rel="noreferrer"
               className="proj-fadein proj-fadein-d2"
@@ -504,7 +504,10 @@ const Projects = () => {
               gap: "24px",
             }}
           >
-            <FeaturedCard />
+            <FeaturedCard
+              liveUrl="https://velaro-kappa.vercel.app/"
+              githubUrl="https://github.com/danish-devv/Velaro"
+            />
             {miniProjects.map((p) => (
               <MiniCard key={p.num} {...p} />
             ))}

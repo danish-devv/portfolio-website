@@ -32,7 +32,7 @@ const Footer = () => {
           letterSpacing: "0.06em",
         }}
       >
-        © 2025 Danish &nbsp;·&nbsp;{" "}
+        © 2026 Danish &nbsp;·&nbsp;{" "}
         <span style={{ color: "#6C63FF" }}>MERN Stack Developer</span>
       </div>
     </footer>
